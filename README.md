@@ -36,7 +36,7 @@ Or use build.bat to automate the process.
 
 ## 🧰 Planned Features
 - Batch conversion support (multiple assets to one resource)
-- Multilingual support (currently only in English)
+- ~~Multilingual support (currently only in English)~~
 - Include support for audio files
 
 ## ❤️ Credits
