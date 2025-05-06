@@ -1,6 +1,5 @@
 /build/
 /dist/
 *.spec
-*.json
 __pycache__/
 *.pyc

@@ -1,0 +1,25 @@
+{
+    "app_title": "FiveM Vehicle Packer",
+    "welcome_title": "\ud83d\ude97 FiveM Vehicle Packer",
+    "welcome_subtitle": "Easy-to-use conversion tool for GTA V vehicle assets to FiveM Ready assets!",
+    "select_output": "Select Output Directory:",
+    "browse": "Browse",
+    "open_when_done": "Open output folder when done",
+    "next": "Next",
+    "back": "Back",
+    "done": "Convert Another",
+    "convert": "Compile Resource",
+    "invalid_folder": "\u274c Invalid directory.",
+    "conversion_failed": "\u274c Conversion failed.",
+    "conversion_complete": "\u2705 Conversion complete!",
+    "converting": "Converting... Please wait.",
+    "recent_converted": "Recently Converted:",
+    "select_parent_folder": "Select Parent Folder",
+    "drag_instruction": "\u2b07\ufe0f Drag and drop a folder here \u2b07\ufe0f",
+    "select_mod_instruction": "Drag and drop or browse to a folder containing extracted GTA mod files",
+    "confirm_conversion": "Start conversion for folder: {name}?",
+    "meta_missing_warning": "\u26a0\ufe0f Warning: vehicles.meta missing or malformed. Using fallback model name: convertedcar",
+    "fallback_model_notice": "\u26a0\ufe0f Using fallback model name: {name}",
+    "mod_instructions": "1. Open the mod's `dlc.rpf` file using CodeWalker or OpenIV.\n2. Extract all relevant files (e.g., `.meta`, `.ytd`, `.yft`, `.ydr`) to a new folder.\n3. Place all these extracted files into a single folder.\n4. Drag that folder into the box below or use the Browse button.\n5. Confirm to begin automatic conversion to FiveM format."
+  }
+  
