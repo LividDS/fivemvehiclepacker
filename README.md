@@ -38,6 +38,35 @@ pyinstaller --noconfirm --onefile --windowed main.py
 ```
 Or use build.bat to automate the process.
 
+## 📦 Output Structure
+When conversion is done, this is what your output should look like:
+```kotlin
+myvehicle/
+├── fxmanifest.lua
+├── vehicle_names.lua
+├── data/
+│   ├── vehicles.meta
+│   ├── handling.meta
+│   ├── carcols.meta
+│   ├── carvariations.meta
+│   ├── dlctext.meta
+├── stream/
+│   ├── mycar.yft
+│   ├── mycar_hi.yft
+│   ├── mycar.ytd
+│   ├── interior.ytd
+│   ├── mycar.ymt
+├── audioconfig/
+│   ├── mycar_game.dat151.rel
+│   ├── mycar_sounds.dat54.rel
+│   ├── mycar_game.dat151.nametable
+│   ├── mycar_sounds.dat54.nametable
+├── sfx/
+│   └── dlc_mycar/
+│       ├── mycar.awc
+│       └── mycar_npc.awc
+```
+
 ## 🧰 Planned Features
 - Batch conversion support. (multiple assets to one resource)
 - ~~Multilingual support. (currently only in English)~~
