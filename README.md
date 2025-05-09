@@ -6,7 +6,8 @@ FiveM Vehicle Packer is an intuitive GUI tool that streamlines the conversion of
 ## 🚀 Features
 - **Automated Conversion:** Compile loose `.meta`, `.yft`, `.ytd` into a FiveM-compatible resource format.
 - **Auto-Generated Files:** Creates `fxmanifest.lua` and `vehicle_names.lua` files.
-- **Resource Structuring:** Sets up `stream` and `data` folders with corresponding files.
+- **Resource Structuring:** Sets up `stream`, `data`, `audioconfig` and `sfx/dlc_` folders with corresponding files.
+- **[NEW] Sound Files Included:** Now also recognizes `.rel` and `.awc` files. 
 
 ## 📥 Download
 You can grab the latest .exe from the Releases section.
@@ -70,7 +71,7 @@ myvehicle/
 ## 🧰 Planned Features
 - Batch conversion support. (multiple assets to one resource)
 - ~~Multilingual support. (currently only in English)~~
-- Include support for audio files.
+- ~~Include support for audio files.~~
 
 ## 🤝 Contributing
 Contributions are welcome! If you have suggestions, encounter issues, or want to enhance the tool.
