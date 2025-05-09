@@ -4,7 +4,7 @@ rmdir /s /q dist
 rmdir /s /q build
 
 echo 🛠️  Building main.exe (onefile)...
-pyinstaller --noconfirm --onefile --console ^
+pyinstaller --noconfirm --onefile --windowed ^
   --add-data "gui/i18n/en.json;gui/i18n" ^
   --add-data "gui/i18n/de.json;gui/i18n" ^
   --add-data "gui/i18n/fr.json;gui/i18n" ^

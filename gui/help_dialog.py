@@ -15,13 +15,14 @@ class HelpDialog(QDialog):
 
         help_text = QTextEdit()
         help_text.setReadOnly(True)
-        help_text.setPlainText("""
-1. Download the dlc.rpf file from a vehicle of choice and open it in OpenIV or CodeWalker.
-2. Create a new folder anywhere, extract any .meta, .yft and .ytd files from the above mentioned dlc.rpf and drop these into your newly created folder.
-3. Choose an output directory and click Next.
-4. The tool will convert and structure files for FiveM.
-5. Use 'Multi-Vehicle Compiler' if you want to combine multiple FiveM asset resources into one FiveM resource.
+        help_text.setPlainText("""\
+1. Open the mod's `dlc.rpf` using OpenIV or CodeWalker.
+2. Extract all relevant files into a new folder — this includes: `.meta`, `.yft`, `.ytd`, `.ydr`, `.rel`, `.awc`.
+3. Select that folder in the tool, then choose an output directory and click Next.
+4. The tool will compile and organize the files into a ready-to-use FiveM resource.
+5. Use 'Multi-Vehicle Compiler' if you want to combine multiple vehicle mods into a single resource. SOON!
 """)
+
         layout.addWidget(help_text)
 
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Close)

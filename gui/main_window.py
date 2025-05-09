@@ -1,11 +1,8 @@
 import os
 import re
-import sys
 import traceback
-from datetime import datetime
 from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QStackedWidget, QFileDialog,
-    QMessageBox, QPushButton, QToolBar, QWidget, QSizePolicy, QHBoxLayout
+    QMainWindow, QStackedWidget, QFileDialog, QMessageBox, QPushButton, QToolBar, QWidget, QSizePolicy, QHBoxLayout
 )
 from PyQt6.QtCore import Qt, QTimer
 from .welcome_page import WelcomePage
@@ -16,6 +13,7 @@ from .utils import load_settings, save_settings, open_folder
 from .settings_dialog import SettingsDialog
 from .help_dialog import HelpDialog
 from converter import build_fivem_resource
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -182,17 +180,6 @@ class MainWindow(QMainWindow):
             self.progress_page.status_label.setText("\u2705 Conversion complete!")
             summary = f"Model: {model_name}\nStreamed files: {len(stream_files)}\nMeta files: {len(meta_files)}\nSaved to: {output_folder}"
             self.progress_page.summary_text.append("\n" + summary)
-
-            recent = self.settings.get("recent_conversions", [])
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-            new_entry = {"path": output_folder, "timestamp": timestamp}
-
-            if not any((entry.get("path") if isinstance(entry, dict) else entry) == output_folder for entry in recent):
-                recent.append(new_entry)
-                self.settings["recent_conversions"] = recent[-10:]
-                save_settings(self.settings)
-
-            self.progress_page.update_recent(self.settings["recent_conversions"])
 
             if open_when_done:
                 open_folder(output_folder)

@@ -1,8 +1,8 @@
 from PyQt6.QtWidgets import (
-    QDialog, QVBoxLayout, QLabel, QComboBox, QDialogButtonBox, QFormLayout
+    QDialog, QVBoxLayout, QComboBox, QDialogButtonBox, QFormLayout
 )
 from PyQt6.QtCore import Qt
-from gui.utils import load_settings, save_settings
+from gui.utils import load_settings
 
 class SettingsDialog(QDialog):
     def __init__(self, current_lang='en', parent=None):
@@ -39,6 +39,11 @@ class SettingsDialog(QDialog):
         self.lang_selector.addItem("Deutsch", userData="de")
         self.lang_selector.addItem("Français", userData="fr")
         self.lang_selector.addItem("Español", userData="es")
+        self.lang_selector.addItem("Português", userData="pt")
+        self.lang_selector.addItem("Türkçe", userData="tr")
+        self.lang_selector.addItem("Polski", userData="pl")
+        self.lang_selector.addItem("Русский", userData="ru")
+        self.lang_selector.addItem("简体中文", userData="zh")
 
         self.lang_selector.setCurrentText(current_lang)
         form_layout.addRow("🌐 Language:", self.lang_selector)

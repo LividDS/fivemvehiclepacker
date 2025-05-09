@@ -1,0 +1,23 @@
+{
+  "app_title": "Empacotador de Veículos FiveM",
+  "welcome_title": "🚗 Empacotador de Veículos FiveM",
+  "welcome_subtitle": "Ferramenta de conversão fácil para transformar mods de veículos do GTA V em recursos compatíveis com o FiveM!",
+  "select_output": "Selecionar diretório de saída:",
+  "browse": "Procurar",
+  "open_when_done": "Abrir diretório após a conclusão",
+  "next": "Próximo",
+  "back": "Voltar",
+  "done": "Converter mais",
+  "convert": "Compilar recurso",
+  "invalid_folder": "❌ Diretório inválido.",
+  "conversion_failed": "❌ Falha na conversão.",
+  "conversion_complete": "✅ Conversão concluída!",
+  "converting": "Convertendo... Por favor, aguarde.",
+  "select_parent_folder": "Selecionar pasta principal",
+  "drag_instruction": "⬇️ Arraste uma pasta para cá ⬇️",
+  "select_mod_instruction": "Arraste uma pasta para cá ou selecione uma com arquivos extraídos do mod de GTA (.meta, .yft, .ytd, .rel, .awc)",
+  "confirm_conversion": "Iniciar conversão para a pasta: {name}?",
+  "meta_missing_warning": "⚠️ Aviso: vehicles.meta está ausente ou corrompido. Usando nome de modelo padrão: convertedcar",
+  "fallback_model_notice": "⚠️ Usando nome de modelo padrão: {name}",
+  "mod_instructions": "1. Abra o arquivo `dlc.rpf` do mod usando o CodeWalker ou OpenIV.\n2. Extraia todos os arquivos relevantes (por exemplo, `.meta`, `.ytd`, `.yft`, `.ydr`, `.rel`, `.awc`) para uma nova pasta.\n3. Coloque todos os arquivos extraídos em uma única pasta.\n4. Arraste essa pasta para o campo abaixo ou use o botão Procurar.\n5. Confirme para iniciar a conversão automática para o formato FiveM."
+}

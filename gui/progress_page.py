@@ -1,8 +1,8 @@
-import os
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QTextEdit, QPushButton,
-    QSpacerItem, QSizePolicy, QVBoxLayout
+    QSizePolicy, QSpacerItem
 )
+from PyQt6.QtGui import QFont
 from gui.translator import load_language
 
 class ConversionProgressPage(QWidget):
@@ -14,40 +14,39 @@ class ConversionProgressPage(QWidget):
         layout.setSpacing(15)
 
         self.status_label = QLabel("")
+
         self.summary_text = QTextEdit()
         self.summary_text.setReadOnly(True)
-
-        self.recent_label = QLabel(self.tr["recent_converted"])
-        self.recent_buttons_layout = QVBoxLayout()
+        self.summary_text.setFont(QFont("Courier New", 10))
+        self.summary_text.setStyleSheet("background-color: black; color: white; border: 1px solid #555;")
 
         self.done_button = QPushButton(self.tr["done"])
         self.back_button = QPushButton(self.tr["back"])
 
         layout.addWidget(self.status_label)
         layout.addWidget(self.summary_text)
-        layout.addWidget(self.recent_label)
-        layout.addLayout(self.recent_buttons_layout)
         layout.addWidget(self.done_button)
         layout.addWidget(self.back_button)
         layout.addItem(QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding))
 
         self.setLayout(layout)
 
-    def update_recent(self, recent_entries):
-        for i in reversed(range(self.recent_buttons_layout.count())):
-            widget = self.recent_buttons_layout.itemAt(i).widget()
-            if widget:
-                widget.setParent(None)
+    def show_summary(self, stream_files, meta_files, audio_files):
+        summary = "\n✅ Conversion Complete!\n\n"
 
-        for entry in recent_entries[-5:][::-1]:
-            if isinstance(entry, dict):
-                path = entry.get("path")
-                timestamp = entry.get("timestamp")
-            else:
-                path = entry
-                timestamp = ""
-            name = os.path.basename(path)
-            btn = QPushButton(f"📂 {name} ({timestamp})" if timestamp else f"📂 {name}")
-            from gui.utils import open_folder
-            btn.clicked.connect(lambda _, p=path: open_folder(p))
-            self.recent_buttons_layout.addWidget(btn)
+        if stream_files:
+            summary += "📦 Streamed files:\n"
+            for f in stream_files:
+                summary += f" - {f}\n"
+
+        if meta_files:
+            summary += "\n🗂 Meta files:\n"
+            for f in meta_files:
+                summary += f" - {f}\n"
+
+        if audio_files:
+            summary += "\n🔊 Audio files:\n"
+            for f in audio_files:
+                summary += f" - {f}\n"
+
+        self.summary_text.setPlainText(summary)

@@ -1,0 +1,23 @@
+{
+  "app_title": "FiveM Araç Paketleyici",
+  "welcome_title": "🚗 FiveM Araç Paketleyici",
+  "welcome_subtitle": "GTA V araç modlarını FiveM uyumlu kaynaklara dönüştürmek için kolay kullanımlı bir araç!",
+  "select_output": "Çıktı dizinini seçin:",
+  "browse": "Gözat",
+  "open_when_done": "Tamamlandığında klasörü aç",
+  "next": "İleri",
+  "back": "Geri",
+  "done": "Başka birini dönüştür",
+  "convert": "Kaynağı derle",
+  "invalid_folder": "❌ Geçersiz klasör.",
+  "conversion_failed": "❌ Dönüştürme başarısız oldu.",
+  "conversion_complete": "✅ Dönüştürme tamamlandı!",
+  "converting": "Dönüştürülüyor... Lütfen bekleyin.",
+  "select_parent_folder": "Üst klasörü seçin",
+  "drag_instruction": "⬇️ Bir klasörü buraya sürükleyin ⬇️",
+  "select_mod_instruction": "Bir klasörü buraya sürükleyin veya GTA mod dosyaları içeren klasörü seçin (.meta, .yft, .ytd, .rel, .awc)",
+  "confirm_conversion": "Bu klasör için dönüştürme başlatılsın mı: {name}?",
+  "meta_missing_warning": "⚠️ Uyarı: vehicles.meta eksik veya bozuk. Varsayılan model adı kullanılacak: convertedcar",
+  "fallback_model_notice": "⚠️ Varsayılan model adı kullanılacak: {name}",
+  "mod_instructions": "1. CodeWalker veya OpenIV ile modun `dlc.rpf` dosyasını açın.\n2. İlgili tüm dosyaları dışa aktarın (örn. `.meta`, `.ytd`, `.yft`, `.ydr`, `.rel`, `.awc`).\n3. Tüm dışa aktarılan dosyaları tek bir klasöre koyun.\n4. Bu klasörü aşağıya sürükleyin veya Gözat düğmesini kullanın.\n5. FiveM formatına otomatik dönüştürme işlemini başlatmak için onaylayın."
+}
