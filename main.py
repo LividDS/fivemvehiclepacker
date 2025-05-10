@@ -1,6 +1,6 @@
 import sys
 
-APP_VERSION = "v1.0.1"
+APP_VERSION = "v1.0.2"
 
 try:
     from PyQt6.QtWidgets import QApplication
